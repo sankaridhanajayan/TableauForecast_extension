@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forecast Extractor</title>
+  <script src="tableau.extensions.1.latest.min.js"></script>
+  <script src="extension.js" defer></script>
+  <style>
+    body { font-family: sans-serif; padding: 12px; font-size: 13px; margin: 0; }
+    #status { color: #888; font-size: 11px; margin-bottom: 10px; }
+    #summary {
+      display: flex;
+      gap: 10px;
+    }
+    .summary-card {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+    .summary-card .label { color: #666; margin-bottom: 4px; }
+    .summary-card .value { font-size: 16px; font-weight: 600; }
+    .card-actual   { background: #e8f0fe; border-left: 4px solid #3b6abf; }
+    .card-estimate { background: #e6f4ea; border-left: 4px solid #2e7d32; }
+    .card-total    { background: #fff3e0; border-left: 4px solid #e65100; }
+  </style>
+</head>
+<body>
+  <div id="summary">
+    <div class="summary-card card-actual">
+      <div class="label">Sum of Actuals</div>
+      <div class="value" id="sum-actual">—</div>
+    </div>
+    <div class="summary-card card-estimate">
+      <div class="label">Sum of Estimates</div>
+      <div class="value" id="sum-estimate">—</div>
+    </div>
+    <div class="summary-card card-total">
+      <div class="label">Grand Total</div>
+      <div class="value" id="sum-total">—</div>
+    </div>
+  </div>
+</body>
+</html>
