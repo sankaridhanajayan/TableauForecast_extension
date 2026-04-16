@@ -1,0 +1,1 @@
+This project enhances Tableau’s forecasting by surfacing total forecasted sales and inventory directly within the dashboard using custom extensions, eliminating manual calculations. It combines real-time KPI insights with proactive Slack alerts to notify teams of risks and enable faster, data-driven decisions.
