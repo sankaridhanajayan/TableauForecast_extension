@@ -53,7 +53,7 @@ function handleChange(event) {
 async function fetchForecastData() {
   const dashboard = tableau.extensions.dashboardContent.dashboard;
   const forecastSheet = dashboard.worksheets.find(
-    ws => ws.name === 'Forecast'
+    ws => ws.name === 'Forecast_sales'
   );
 
   if (!forecastSheet) {
