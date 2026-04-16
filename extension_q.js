@@ -87,7 +87,7 @@ function parseTableauData(dataTable, colNames) {
 
   const monthCol = find(['month', 'order']);
   const typeCol  = find(['forecast', 'indicator']);
-  const QuantityCol = find(['quantity']);
+  const quantityCol = find(['quantity']);
 
   return dataTable.data.map(row => {
     const get = (colName) => {
