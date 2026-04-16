@@ -87,7 +87,7 @@ function parseTableauData(dataTable, colNames) {
 
   const monthCol = find(['month', 'order']);
   const typeCol  = find(['forecast', 'indicator']);
-  const salesCol = find(['sales']);
+  const QuantityCol = find(['quantity']);
 
   return dataTable.data.map(row => {
     const get = (colName) => {
@@ -98,7 +98,7 @@ function parseTableauData(dataTable, colNames) {
     return {
       month: get(monthCol),
       type:  get(typeCol),
-      sales: get(salesCol)
+      quantity: get(quantityCol)
     };
   });
 }
@@ -115,7 +115,7 @@ function computeSummary(data) {
   let estimateSum = 0;
 
   data.forEach(row => {
-    const val = parseNumber(row.sales);
+    const val = parseNumber(row.quantity);
     if (row.type === 'Actual')   actualSum   += val;
     if (row.type === 'Estimate') estimateSum += val;
   });
